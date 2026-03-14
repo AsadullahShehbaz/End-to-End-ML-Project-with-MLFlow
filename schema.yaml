@@ -1,0 +1,21 @@
+# schema.yaml
+
+COLUMNS:
+  id: int64
+  Age: int64
+  Sex: int64
+  Chest pain type: int64
+  BP: int64
+  Cholesterol: int64
+  FBS over 120: int64
+  EKG results: int64
+  Max HR: int64
+  Exercise angina: int64
+  ST depression: float64
+  Slope of ST: int64
+  Number of vessels fluro: int64
+  Thallium: int64
+  Heart Disease: object
+
+TARGET_COLUMN:
+  name: Heart Disease
