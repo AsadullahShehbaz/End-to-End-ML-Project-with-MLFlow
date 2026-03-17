@@ -87,7 +87,7 @@ class DataTransformation:
     def encode_target_variable(self, data):
         if self.target_column in data.columns:
             if data[self.target_column].dtype == "object":
-                data["Heart Disease"] = self.labelencoder.fit_transform(data["Heart Disease"])
+                data[self.target_column] = self.labelencoder.fit_transform(data[self.target_column])
                 logger.info("Encoded target variable ")
 
         return data 
@@ -160,6 +160,8 @@ class DataTransformation:
 
         data = self.handle_categorical_features(data) 
 
+        data = self.encode_target_variable(data)
+        
         X = data.drop(self.target_column,axis=1)
         y = data[self.target_column]
 

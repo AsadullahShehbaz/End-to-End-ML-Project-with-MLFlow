@@ -1,1 +1,5 @@
-key: value
+LogisticRegression:
+  C: 2.0
+  max_iter: 500
+  solver: lbfgs
+
